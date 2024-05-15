@@ -12,9 +12,15 @@ export default function Card({
   metadata,
 }: Product) {
   return (
-    <div className='mx-3'>
-      <Image src={imageUrl} alt='' />
-      <p className='text-[600] text-[22px]'>{price}</p>
+    <div className='mx-3 bg-[#F9F8F6] rounded-md'>
+      <Image
+        src={imageUrl}
+        alt=''
+        width={500}
+        height={500}
+        className='bg-transparent'
+      />
+      <p className='text-[600] text-[22px]'>${price * 1000}</p>
       <p className='text=[400] text-[16px]'>{name}</p>
       <div className='flex justify-between'>
         {weight}
